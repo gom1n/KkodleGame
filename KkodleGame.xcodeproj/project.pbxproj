@@ -67,13 +67,10 @@
 		23A52AD12D96D05C00A730A4 /* KkodleGame */ = {
 			isa = PBXGroup;
 			children = (
-				23A52AEF2D96F36B00A730A4 /* SplashView.swift */,
-				23A52AD22D96D05C00A730A4 /* KkodleGameApp.swift */,
 				23A52AD42D96D05C00A730A4 /* ContentView.swift */,
-				23A52AE32D96D1C400A730A4 /* JamoHelper.swift */,
-				23A52AE52D96D1F600A730A4 /* GameViewModel.swift */,
-				23A52AE72D96D21200A730A4 /* GameView.swift */,
-				23A52AE92D96D22500A730A4 /* KeyboardView.swift */,
+				23A52AF32D97026900A730A4 /* Splash */,
+				23A52AF42D97027100A730A4 /* Game */,
+				23A52AF52D97028400A730A4 /* Utils */,
 				23A52AD62D96D05E00A730A4 /* Assets.xcassets */,
 				23A52AE02D96D0CC00A730A4 /* Resources */,
 				23A52AD82D96D05E00A730A4 /* Preview Content */,
@@ -97,6 +94,33 @@
 				23A52AEC2D96EF6C00A730A4 /* COMMON_NOUNS.txt */,
 			);
 			path = Resources;
+			sourceTree = "<group>";
+		};
+		23A52AF32D97026900A730A4 /* Splash */ = {
+			isa = PBXGroup;
+			children = (
+				23A52AEF2D96F36B00A730A4 /* SplashView.swift */,
+			);
+			path = Splash;
+			sourceTree = "<group>";
+		};
+		23A52AF42D97027100A730A4 /* Game */ = {
+			isa = PBXGroup;
+			children = (
+				23A52AD22D96D05C00A730A4 /* KkodleGameApp.swift */,
+				23A52AE72D96D21200A730A4 /* GameView.swift */,
+				23A52AE52D96D1F600A730A4 /* GameViewModel.swift */,
+				23A52AE92D96D22500A730A4 /* KeyboardView.swift */,
+			);
+			path = Game;
+			sourceTree = "<group>";
+		};
+		23A52AF52D97028400A730A4 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				23A52AE32D96D1C400A730A4 /* JamoHelper.swift */,
+			);
+			path = Utils;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -328,9 +352,13 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = gomin.KkodleGame;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -358,9 +386,13 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = gomin.KkodleGame;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
