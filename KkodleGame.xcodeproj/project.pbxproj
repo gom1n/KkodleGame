@@ -1,0 +1,387 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		23A52AD32D96D05C00A730A4 /* KkodleGameApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23A52AD22D96D05C00A730A4 /* KkodleGameApp.swift */; };
+		23A52AD52D96D05C00A730A4 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23A52AD42D96D05C00A730A4 /* ContentView.swift */; };
+		23A52AD72D96D05E00A730A4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 23A52AD62D96D05E00A730A4 /* Assets.xcassets */; };
+		23A52ADA2D96D05E00A730A4 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 23A52AD92D96D05E00A730A4 /* Preview Assets.xcassets */; };
+		23A52AE42D96D1C400A730A4 /* JamoHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23A52AE32D96D1C400A730A4 /* JamoHelper.swift */; };
+		23A52AE62D96D1F600A730A4 /* GameViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23A52AE52D96D1F600A730A4 /* GameViewModel.swift */; };
+		23A52AE82D96D21200A730A4 /* GameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23A52AE72D96D21200A730A4 /* GameView.swift */; };
+		23A52AEA2D96D22500A730A4 /* KeyboardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23A52AE92D96D22500A730A4 /* KeyboardView.swift */; };
+		23A52AED2D96EF6C00A730A4 /* ALL_NOUNS.txt in Resources */ = {isa = PBXBuildFile; fileRef = 23A52AEB2D96EF6C00A730A4 /* ALL_NOUNS.txt */; };
+		23A52AEE2D96EF6C00A730A4 /* COMMON_NOUNS.txt in Resources */ = {isa = PBXBuildFile; fileRef = 23A52AEC2D96EF6C00A730A4 /* COMMON_NOUNS.txt */; };
+		23A52AF02D96F36B00A730A4 /* SplashView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23A52AEF2D96F36B00A730A4 /* SplashView.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		23A52ACF2D96D05C00A730A4 /* KkodleGame.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KkodleGame.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		23A52AD22D96D05C00A730A4 /* KkodleGameApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KkodleGameApp.swift; sourceTree = "<group>"; };
+		23A52AD42D96D05C00A730A4 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		23A52AD62D96D05E00A730A4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		23A52AD92D96D05E00A730A4 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		23A52AE32D96D1C400A730A4 /* JamoHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JamoHelper.swift; sourceTree = "<group>"; };
+		23A52AE52D96D1F600A730A4 /* GameViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewModel.swift; sourceTree = "<group>"; };
+		23A52AE72D96D21200A730A4 /* GameView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameView.swift; sourceTree = "<group>"; };
+		23A52AE92D96D22500A730A4 /* KeyboardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardView.swift; sourceTree = "<group>"; };
+		23A52AEB2D96EF6C00A730A4 /* ALL_NOUNS.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = ALL_NOUNS.txt; path = ../../../../../Downloads/ALL_NOUNS.txt; sourceTree = "<group>"; };
+		23A52AEC2D96EF6C00A730A4 /* COMMON_NOUNS.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = COMMON_NOUNS.txt; path = ../../../../../Downloads/COMMON_NOUNS.txt; sourceTree = "<group>"; };
+		23A52AEF2D96F36B00A730A4 /* SplashView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashView.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		23A52ACC2D96D05C00A730A4 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		23A52AC62D96D05C00A730A4 = {
+			isa = PBXGroup;
+			children = (
+				23A52AD12D96D05C00A730A4 /* KkodleGame */,
+				23A52AD02D96D05C00A730A4 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		23A52AD02D96D05C00A730A4 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				23A52ACF2D96D05C00A730A4 /* KkodleGame.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		23A52AD12D96D05C00A730A4 /* KkodleGame */ = {
+			isa = PBXGroup;
+			children = (
+				23A52AEF2D96F36B00A730A4 /* SplashView.swift */,
+				23A52AD22D96D05C00A730A4 /* KkodleGameApp.swift */,
+				23A52AD42D96D05C00A730A4 /* ContentView.swift */,
+				23A52AE32D96D1C400A730A4 /* JamoHelper.swift */,
+				23A52AE52D96D1F600A730A4 /* GameViewModel.swift */,
+				23A52AE72D96D21200A730A4 /* GameView.swift */,
+				23A52AE92D96D22500A730A4 /* KeyboardView.swift */,
+				23A52AD62D96D05E00A730A4 /* Assets.xcassets */,
+				23A52AE02D96D0CC00A730A4 /* Resources */,
+				23A52AD82D96D05E00A730A4 /* Preview Content */,
+			);
+			path = KkodleGame;
+			sourceTree = "<group>";
+		};
+		23A52AD82D96D05E00A730A4 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				23A52AD92D96D05E00A730A4 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		23A52AE02D96D0CC00A730A4 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				23A52AEB2D96EF6C00A730A4 /* ALL_NOUNS.txt */,
+				23A52AEC2D96EF6C00A730A4 /* COMMON_NOUNS.txt */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		23A52ACE2D96D05C00A730A4 /* KkodleGame */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 23A52ADD2D96D05E00A730A4 /* Build configuration list for PBXNativeTarget "KkodleGame" */;
+			buildPhases = (
+				23A52ACB2D96D05C00A730A4 /* Sources */,
+				23A52ACC2D96D05C00A730A4 /* Frameworks */,
+				23A52ACD2D96D05C00A730A4 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = KkodleGame;
+			productName = KkodleGame;
+			productReference = 23A52ACF2D96D05C00A730A4 /* KkodleGame.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		23A52AC72D96D05C00A730A4 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1520;
+				LastUpgradeCheck = 1520;
+				TargetAttributes = {
+					23A52ACE2D96D05C00A730A4 = {
+						CreatedOnToolsVersion = 15.2;
+					};
+				};
+			};
+			buildConfigurationList = 23A52ACA2D96D05C00A730A4 /* Build configuration list for PBXProject "KkodleGame" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 23A52AC62D96D05C00A730A4;
+			productRefGroup = 23A52AD02D96D05C00A730A4 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				23A52ACE2D96D05C00A730A4 /* KkodleGame */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		23A52ACD2D96D05C00A730A4 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				23A52ADA2D96D05E00A730A4 /* Preview Assets.xcassets in Resources */,
+				23A52AEE2D96EF6C00A730A4 /* COMMON_NOUNS.txt in Resources */,
+				23A52AED2D96EF6C00A730A4 /* ALL_NOUNS.txt in Resources */,
+				23A52AD72D96D05E00A730A4 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		23A52ACB2D96D05C00A730A4 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				23A52AE62D96D1F600A730A4 /* GameViewModel.swift in Sources */,
+				23A52AD52D96D05C00A730A4 /* ContentView.swift in Sources */,
+				23A52AD32D96D05C00A730A4 /* KkodleGameApp.swift in Sources */,
+				23A52AEA2D96D22500A730A4 /* KeyboardView.swift in Sources */,
+				23A52AE42D96D1C400A730A4 /* JamoHelper.swift in Sources */,
+				23A52AE82D96D21200A730A4 /* GameView.swift in Sources */,
+				23A52AF02D96F36B00A730A4 /* SplashView.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		23A52ADB2D96D05E00A730A4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		23A52ADC2D96D05E00A730A4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		23A52ADE2D96D05E00A730A4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"KkodleGame/Preview Content\"";
+				DEVELOPMENT_TEAM = B974XY47GZ;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = "꼬들밥";
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = gomin.KkodleGame;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		23A52ADF2D96D05E00A730A4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"KkodleGame/Preview Content\"";
+				DEVELOPMENT_TEAM = B974XY47GZ;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = "꼬들밥";
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = gomin.KkodleGame;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		23A52ACA2D96D05C00A730A4 /* Build configuration list for PBXProject "KkodleGame" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				23A52ADB2D96D05E00A730A4 /* Debug */,
+				23A52ADC2D96D05E00A730A4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		23A52ADD2D96D05E00A730A4 /* Build configuration list for PBXNativeTarget "KkodleGame" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				23A52ADE2D96D05E00A730A4 /* Debug */,
+				23A52ADF2D96D05E00A730A4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 23A52AC72D96D05C00A730A4 /* Project object */;
+}
