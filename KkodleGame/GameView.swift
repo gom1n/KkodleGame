@@ -10,17 +10,31 @@ import SwiftUI
 
 struct GameView: View {
     @StateObject private var viewModel = GameViewModel()
+    @State private var showHowToPlay = false
 
     var body: some View {
         VStack(spacing: 12) {
-            VStack(spacing: 5) {
-                Text("꼬들밥")
-                    .font(.system(size: 36, weight: .bold))
-                    .foregroundColor(.primary)
+            ZStack {
+                VStack(spacing: 5) {
+                    Text("꼬들밥")
+                        .font(.system(size: 36, weight: .bold))
+                        .foregroundColor(.primary)
 
-                Text("Korean Word Puzzle Game")
-                    .font(.system(size: 12, weight: .medium))
-                    .foregroundColor(Color(.systemGray4))
+                    Text("Korean Word Puzzle Game")
+                        .font(.system(size: 12, weight: .medium))
+                        .foregroundColor(Color(.systemGray4))
+                }
+
+                HStack {
+                    Spacer()
+                    Button(action: {
+                        showHowToPlay = true
+                    }) {
+                        Image(systemName: "questionmark.circle")
+                            .font(.system(size: 24))
+                            .foregroundColor(.gray)
+                    }
+                }
             }
             
             Spacer()
@@ -67,6 +81,10 @@ struct GameView: View {
             viewModel.errorMessage = nil
         }
         .alert("게임 종료", isPresented: $viewModel.isGameOver) {
+            Button("결과 복사하기") {
+                viewModel.copyResultToClipboard()
+                viewModel.resetGame()
+            }
             Button("다시 시작") {
                 viewModel.resetGame()
             }
@@ -75,6 +93,11 @@ struct GameView: View {
                 Text("🎉 정답이에요!\n정답: '\(viewModel.rawAnswer)'")
             } else {
                 Text("😢 아쉽네요!\n정답: '\(viewModel.rawAnswer)'")
+            }
+        }
+        .sheet(isPresented: $showHowToPlay) {
+            NavigationStack {
+                HowToPlayView()
             }
         }
     }

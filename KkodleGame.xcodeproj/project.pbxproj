@@ -18,6 +18,7 @@
 		23A52AED2D96EF6C00A730A4 /* ALL_NOUNS.txt in Resources */ = {isa = PBXBuildFile; fileRef = 23A52AEB2D96EF6C00A730A4 /* ALL_NOUNS.txt */; };
 		23A52AEE2D96EF6C00A730A4 /* COMMON_NOUNS.txt in Resources */ = {isa = PBXBuildFile; fileRef = 23A52AEC2D96EF6C00A730A4 /* COMMON_NOUNS.txt */; };
 		23A52AF02D96F36B00A730A4 /* SplashView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23A52AEF2D96F36B00A730A4 /* SplashView.swift */; };
+		23A52AF22D96FEFD00A730A4 /* HowToPlayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23A52AF12D96FEFC00A730A4 /* HowToPlayView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -33,6 +34,7 @@
 		23A52AEB2D96EF6C00A730A4 /* ALL_NOUNS.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = ALL_NOUNS.txt; path = ../../../../../Downloads/ALL_NOUNS.txt; sourceTree = "<group>"; };
 		23A52AEC2D96EF6C00A730A4 /* COMMON_NOUNS.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = COMMON_NOUNS.txt; path = ../../../../../Downloads/COMMON_NOUNS.txt; sourceTree = "<group>"; };
 		23A52AEF2D96F36B00A730A4 /* SplashView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashView.swift; sourceTree = "<group>"; };
+		23A52AF12D96FEFC00A730A4 /* HowToPlayView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HowToPlayView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -75,6 +77,7 @@
 				23A52AD62D96D05E00A730A4 /* Assets.xcassets */,
 				23A52AE02D96D0CC00A730A4 /* Resources */,
 				23A52AD82D96D05E00A730A4 /* Preview Content */,
+				23A52AF12D96FEFC00A730A4 /* HowToPlayView.swift */,
 			);
 			path = KkodleGame;
 			sourceTree = "<group>";
@@ -175,6 +178,7 @@
 				23A52AE42D96D1C400A730A4 /* JamoHelper.swift in Sources */,
 				23A52AE82D96D21200A730A4 /* GameView.swift in Sources */,
 				23A52AF02D96F36B00A730A4 /* SplashView.swift in Sources */,
+				23A52AF22D96FEFD00A730A4 /* HowToPlayView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

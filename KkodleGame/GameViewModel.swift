@@ -189,3 +189,27 @@ class GameViewModel: ObservableObject {
         return result
     }
 }
+
+import UIKit
+
+extension GameViewModel {
+    func copyResultToClipboard() {
+        var result = "🍚꼬들밥🍚 - \(attempts.count)회 만에 성공!✨\n\n"
+
+        for attempt in attempts {
+            for tile in attempt {
+                switch tile.color {
+                case .green:
+                    result += "🟩"
+                case .yellow:
+                    result += "🟨"
+                case .gray:
+                    result += "⬜️"
+                }
+            }
+            result += "\n"
+        }
+
+        UIPasteboard.general.string = result
+    }
+}
