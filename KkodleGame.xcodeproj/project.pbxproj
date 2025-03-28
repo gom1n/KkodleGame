@@ -35,6 +35,7 @@
 		23A52AEC2D96EF6C00A730A4 /* COMMON_NOUNS.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = COMMON_NOUNS.txt; path = ../../../../../Downloads/COMMON_NOUNS.txt; sourceTree = "<group>"; };
 		23A52AEF2D96F36B00A730A4 /* SplashView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashView.swift; sourceTree = "<group>"; };
 		23A52AF12D96FEFC00A730A4 /* HowToPlayView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HowToPlayView.swift; sourceTree = "<group>"; };
+		23A52AF62D97041400A730A4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -67,6 +68,7 @@
 		23A52AD12D96D05C00A730A4 /* KkodleGame */ = {
 			isa = PBXGroup;
 			children = (
+				23A52AF62D97041400A730A4 /* Info.plist */,
 				23A52AD42D96D05C00A730A4 /* ContentView.swift */,
 				23A52AF32D97026900A730A4 /* Splash */,
 				23A52AF42D97027100A730A4 /* Game */,
@@ -339,7 +341,7 @@
 				DEVELOPMENT_TEAM = B974XY47GZ;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_KEY_CFBundleDisplayName = "꼬들밥";
+				INFOPLIST_FILE = KkodleGame/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -373,7 +375,7 @@
 				DEVELOPMENT_TEAM = B974XY47GZ;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_KEY_CFBundleDisplayName = "꼬들밥";
+				INFOPLIST_FILE = KkodleGame/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;

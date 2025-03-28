@@ -12,6 +12,12 @@ struct GameView: View {
     @StateObject private var viewModel = GameViewModel()
     @State private var showHowToPlay = false
 
+    // Alert Properties
+    @State private var showAlert = false
+    @State private var alertTitle = ""
+    @State private var alertMessage = ""
+    @State private var showCopyButton = false
+    
     var body: some View {
         VStack(spacing: 12) {
             ZStack {
@@ -80,24 +86,36 @@ struct GameView: View {
         .onTapGesture {
             viewModel.errorMessage = nil
         }
-        .alert("게임 종료", isPresented: $viewModel.isGameOver) {
-            Button("결과 복사하기") {
-                viewModel.copyResultToClipboard()
-                viewModel.resetGame()
+        .alert(alertTitle, isPresented: $showAlert) {
+            if showCopyButton {
+                Button("결과 복사하기") {
+                    viewModel.copyResultToClipboard()
+                    viewModel.resetGame()
+                }
             }
             Button("다시 시작") {
                 viewModel.resetGame()
             }
         } message: {
-            if viewModel.didWin {
-                Text("🎉 정답이에요!\n정답: '\(viewModel.rawAnswer)'")
-            } else {
-                Text("😢 아쉽네요!\n정답: '\(viewModel.rawAnswer)'")
-            }
+            Text(alertMessage)
         }
         .sheet(isPresented: $showHowToPlay) {
             NavigationStack {
                 HowToPlayView()
+            }
+        }
+        .onChange(of: viewModel.isGameOver) { newValue in
+            if newValue {
+                // 결과 내용 구성
+                alertTitle = "게임 종료"
+                if viewModel.didWin {
+                    alertMessage = "🎉 정답이에요!\n정답: '\(viewModel.rawAnswer)'"
+                    showCopyButton = true
+                } else {
+                    alertMessage = "😢 아쉽네요!\n정답: '\(viewModel.rawAnswer)'"
+                    showCopyButton = false
+                }
+                showAlert = true
             }
         }
     }

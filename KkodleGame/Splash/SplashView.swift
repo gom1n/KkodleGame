@@ -42,7 +42,7 @@ struct SplashView: View {
                 }
                 .padding(.top, -220)
                 .frame(maxWidth: .infinity, maxHeight: .infinity)
-                .background(Color(.systemGray4))
+                .background(Color(red: 209/255, green: 209/255, blue: 214/255))
                 .onAppear {
                     withAnimation(.easeOut(duration: 1.2)) {
                         self.opacity = 1.0
