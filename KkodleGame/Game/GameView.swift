@@ -14,9 +14,9 @@ struct GameView: View {
 
     // Alert Properties
     @State private var showAlert = false
-    @State private var alertTitle = ""
     @State private var alertMessage = ""
     @State private var showCopyButton = false
+    @State private var showToast = false
     
     var body: some View {
         VStack(spacing: 12) {
@@ -83,22 +83,6 @@ struct GameView: View {
             Spacer()
         }
         .padding()
-        .onTapGesture {
-            viewModel.errorMessage = nil
-        }
-        .alert(alertTitle, isPresented: $showAlert) {
-            if showCopyButton {
-                Button("결과 복사하기") {
-                    viewModel.copyResultToClipboard()
-                    viewModel.resetGame()
-                }
-            }
-            Button("다시 시작") {
-                viewModel.resetGame()
-            }
-        } message: {
-            Text(alertMessage)
-        }
         .sheet(isPresented: $showHowToPlay) {
             NavigationStack {
                 HowToPlayView()
@@ -107,7 +91,7 @@ struct GameView: View {
         .onChange(of: viewModel.isGameOver) { newValue in
             if newValue {
                 // 결과 내용 구성
-                alertTitle = "게임 종료"
+//                alertTitle = "게임 종료"
                 if viewModel.didWin {
                     alertMessage = "🎉 정답이에요!\n정답: '\(viewModel.rawAnswer)'"
                     showCopyButton = true
@@ -116,6 +100,75 @@ struct GameView: View {
                     showCopyButton = false
                 }
                 showAlert = true
+            }
+        }
+        // MARK: Custom Alert
+        if showAlert {
+            Color.black.opacity(0.4)
+                .edgesIgnoringSafeArea(.all)
+                .transition(.opacity)
+
+            VStack(spacing: 16) {
+                Text("게임 종료")
+                    .padding(.top, 16)
+                    .font(.title2.bold())
+
+                Text(alertMessage)
+                    .multilineTextAlignment(.center)
+                    .lineLimit(nil)
+                    .fixedSize(horizontal: false, vertical: true)
+                    .foregroundColor(.primary)
+                    .padding(.horizontal, 24)
+                    .frame(maxWidth: .infinity)
+
+                if showCopyButton {
+                    Button("📋 결과 복사하기") {
+                        viewModel.copyResultToClipboard()
+                        withAnimation {
+                            showToast = true
+                        }
+                        DispatchQueue.main.asyncAfter(deadline: .now() + 1.5) {
+                            withAnimation {
+                                showToast = false
+                            }
+                        }
+                    }
+                    .padding(.horizontal)
+                    .padding(.vertical, 8)
+                    .background(Color.blue)
+                    .foregroundColor(.white)
+                    .cornerRadius(10)
+                }
+
+                Button("다시 시작") {
+                    viewModel.resetGame()
+                    withAnimation {
+                        showAlert = false
+                    }
+                }
+                .padding(.bottom, 16)
+            }
+            .background(Color.white)
+            .cornerRadius(16)
+            .shadow(radius: 10)
+            .padding(.vertical, 24)
+            .padding(.horizontal, 24)
+            .frame(maxWidth: 400)
+            .transition(.scale)
+        }
+
+        // MARK: Toast
+        if showToast {
+            VStack {
+                Spacer()
+                Text("✅ 복사되었습니다!")
+                    .padding(.horizontal, 24)
+                    .padding(.vertical, 10)
+                    .background(Color.black.opacity(0.8))
+                    .foregroundColor(.white)
+                    .cornerRadius(20)
+                    .transition(.opacity)
+                    .padding(.bottom, 80)
             }
         }
     }

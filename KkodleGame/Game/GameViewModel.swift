@@ -68,7 +68,12 @@ class GameViewModel: ObservableObject {
         while answer.count != 6 {
             var rng = SystemRandomNumberGenerator()
             rawAnswer = answerPool.randomElement(using: &rng) ?? ""
-            answer = Jamo.decompose(rawAnswer).map { String($0) }
+            let decomposed = Jamo.decompose(rawAnswer).map { String($0) }
+            
+            if decomposed.count == 6 {
+                answer = decomposed
+                break
+            }
         }
         
         print("정답(자모):", answer)
@@ -210,6 +215,7 @@ extension GameViewModel {
             result += "\n"
         }
 
+        result += "\n\(Date())"
         UIPasteboard.general.string = result
     }
 }

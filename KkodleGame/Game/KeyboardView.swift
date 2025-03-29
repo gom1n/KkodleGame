@@ -25,6 +25,8 @@ struct KeyboardView: View {
                     if rowIndex == rows.count - 1 {
                         // 지우기 버튼
                         Button(action: {
+                            let generator = UIImpactFeedbackGenerator(style: .light)
+                            generator.impactOccurred()
                             viewModel.removeLast()
                         }) {
                             Image(systemName: "delete.left")
@@ -36,6 +38,8 @@ struct KeyboardView: View {
 
                     ForEach(rows[rowIndex], id: \.self) { jamo in
                         Button(action: {
+                            let generator = UIImpactFeedbackGenerator(style: .light)
+                            generator.impactOccurred()
                             viewModel.addJamo(jamo)
                         }) {
                             Text(jamo)
@@ -50,6 +54,8 @@ struct KeyboardView: View {
                     if rowIndex == rows.count - 1 {
                         // 확인 버튼
                         Button(action: {
+                            let generator = UIImpactFeedbackGenerator(style: .light)
+                            generator.impactOccurred()
                             viewModel.submit()
                         }) {
                             Image(systemName: "checkmark")
