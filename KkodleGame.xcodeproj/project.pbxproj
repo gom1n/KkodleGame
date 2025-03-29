@@ -22,7 +22,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		23A52ACF2D96D05C00A730A4 /* 꼬들밥.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "꼬들밥.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		23A52ACF2D96D05C00A730A4 /* kkodleGame.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = kkodleGame.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		23A52AD22D96D05C00A730A4 /* KkodleGameApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KkodleGameApp.swift; sourceTree = "<group>"; };
 		23A52AD42D96D05C00A730A4 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		23A52AD62D96D05E00A730A4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -60,7 +60,7 @@
 		23A52AD02D96D05C00A730A4 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				23A52ACF2D96D05C00A730A4 /* 꼬들밥.app */,
+				23A52ACF2D96D05C00A730A4 /* kkodleGame.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -142,7 +142,7 @@
 			);
 			name = KkodleGame;
 			productName = KkodleGame;
-			productReference = 23A52ACF2D96D05C00A730A4 /* 꼬들밥.app */;
+			productReference = 23A52ACF2D96D05C00A730A4 /* kkodleGame.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -354,7 +354,7 @@
 				);
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = gomin.KkodleGame;
-				PRODUCT_NAME = "꼬들밥";
+				PRODUCT_NAME = kkodleGame;
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
 				SUPPORTS_MACCATALYST = NO;
 				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
@@ -389,7 +389,7 @@
 				);
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = gomin.KkodleGame;
-				PRODUCT_NAME = "꼬들밥";
+				PRODUCT_NAME = kkodleGame;
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
 				SUPPORTS_MACCATALYST = NO;
 				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
