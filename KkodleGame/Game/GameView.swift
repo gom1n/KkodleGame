@@ -91,7 +91,6 @@ struct GameView: View {
         .onChange(of: viewModel.isGameOver) { newValue in
             if newValue {
                 // 결과 내용 구성
-//                alertTitle = "게임 종료"
                 if viewModel.didWin {
                     alertMessage = "🎉 정답이에요!\n정답: '\(viewModel.rawAnswer)'"
                     showCopyButton = true
@@ -112,12 +111,13 @@ struct GameView: View {
                 Text("게임 종료")
                     .padding(.top, 16)
                     .font(.title2.bold())
+                    .foregroundColor(.black)
 
                 Text(alertMessage)
                     .multilineTextAlignment(.center)
                     .lineLimit(nil)
                     .fixedSize(horizontal: false, vertical: true)
-                    .foregroundColor(.primary)
+                    .foregroundColor(.black)
                     .padding(.horizontal, 24)
                     .frame(maxWidth: .infinity)
 
