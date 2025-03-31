@@ -15,6 +15,11 @@ enum Jamo {
     static let jongseong = ["","ㄱ","ㄲ","ㄳ","ㄴ","ㄵ","ㄶ","ㄷ","ㄹ","ㄺ","ㄻ","ㄼ",
                      "ㄽ","ㄾ","ㄿ","ㅀ","ㅁ","ㅂ","ㅄ","ㅅ","ㅆ","ㅇ","ㅈ",
                      "ㅊ","ㅋ","ㅌ","ㅍ","ㅎ"]
+    
+    static let complexChoseongMap: [String: [String]] = [
+        "ㄲ": ["ㄱ", "ㄱ"],  "ㄸ": ["ㄷ", "ㄷ"],  "ㅃ": ["ㅂ", "ㅂ"],
+        "ㅆ": ["ㅅ", "ㅅ"],  "ㅉ": ["ㅈ", "ㅈ"]
+    ]
 
     // 복합 중성 분해 테이블
     static let complexVowelMap: [String: [String]] = [
@@ -29,7 +34,7 @@ enum Jamo {
         "ㄳ": ["ㄱ", "ㅅ"], "ㄵ": ["ㄴ", "ㅈ"], "ㄶ": ["ㄴ", "ㅎ"],
         "ㄺ": ["ㄹ", "ㄱ"], "ㄻ": ["ㄹ", "ㅁ"], "ㄼ": ["ㄹ", "ㅂ"],
         "ㄽ": ["ㄹ", "ㅅ"], "ㄾ": ["ㄹ", "ㅌ"], "ㄿ": ["ㄹ", "ㅍ"], "ㅀ": ["ㄹ", "ㅎ"],
-        "ㅄ": ["ㅂ", "ㅅ"]
+        "ㅄ": ["ㅂ", "ㅅ"], "ㄲ": ["ㄱ", "ㄱ"], "ㅆ": ["ㅅ", "ㅅ"]
     ]
     
     static func decompose(_ text: String) -> [String] {
@@ -44,7 +49,14 @@ enum Jamo {
                 let jung = Int((base % (21 * 28)) / 28)
                 let jong = Int(base % 28)
 
-                result.append(choseong[cho])
+//                result.append(choseong[cho])
+                
+                let choChar = choseong[cho]
+                if let parts = complexChoseongMap[choChar] {
+                    result.append(contentsOf: parts)
+                } else {
+                    result.append(choChar)
+                }
 
                 let jungChar = jungseong[jung]
                 if let parts = complexVowelMap[jungChar] {

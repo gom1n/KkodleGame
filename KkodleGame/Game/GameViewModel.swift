@@ -100,14 +100,16 @@ class GameViewModel: ObservableObject {
         }
 
         // 조합한 단어 유효성 검사
-        let input = normalizeDoubleConsonants(currentInput)
-        if !isValidJamoWord(input) {
+//        let input = normalizeDoubleConsonants(currentInput)
+        if !isValidJamoWord(currentInput) {
             errorMessage = "존재하지 않는 단어예요!"
             currentInput = []
             return
         }
 
-        let result = compare(input: input, answer: answer)
+        print("입력값: \(currentInput)")
+        
+        let result = compare(input: currentInput, answer: answer)
         attempts.append(result)
 
         for tile in result {
