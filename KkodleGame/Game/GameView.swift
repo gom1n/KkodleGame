@@ -17,6 +17,8 @@ struct GameView: View {
     @State private var alertMessage = ""
     @State private var showCopyButton = false
     @State private var showToast = false
+    @State private var alertImgName = ""
+    @State private var alertSubDesc = ""
     
     var body: some View {
         VStack(spacing: 12) {
@@ -26,7 +28,7 @@ struct GameView: View {
                         .font(.system(size: 36, weight: .bold))
                         .foregroundColor(.primary)
 
-                    Text("Korean Word Puzzle Game")
+                    Text("한글 자모 맞추기 게임")
                         .font(.system(size: 12, weight: .medium))
                         .foregroundColor(Color(.systemGray4))
                 }
@@ -92,11 +94,15 @@ struct GameView: View {
             if newValue {
                 // 결과 내용 구성
                 if viewModel.didWin {
-                    alertMessage = "🎉 정답이에요!\n정답: '\(viewModel.rawAnswer)'"
+                    alertMessage = "🎉 축하합니다! 🎉"
                     showCopyButton = true
+                    alertImgName = "kkodle-23"
+                    alertSubDesc = "밥풀을 모은 꼬들이는 행복해요!"
                 } else {
-                    alertMessage = "😢 아쉽네요!\n정답: '\(viewModel.rawAnswer)'"
+                    alertMessage = "😢 아쉽네요!"
                     showCopyButton = false
+                    alertImgName = "empty"
+                    alertSubDesc = "텅 - 다시 한번 해볼까요?"
                 }
                 showAlert = true
             }
@@ -108,16 +114,31 @@ struct GameView: View {
                 .transition(.opacity)
 
             VStack(spacing: 16) {
-                Text("게임 종료")
+                Text(alertMessage)
                     .padding(.top, 16)
                     .font(.title2.bold())
                     .foregroundColor(.black)
-
-                Text(alertMessage)
+                
+                Text("정답은 '\(viewModel.rawAnswer)' 입니다!")
+                    .font(.headline.bold())
                     .multilineTextAlignment(.center)
                     .lineLimit(nil)
                     .fixedSize(horizontal: false, vertical: true)
                     .foregroundColor(.black)
+                    .padding(.horizontal, 24)
+                    .frame(maxWidth: .infinity)
+                
+                Image(alertImgName)
+                    .resizable()
+                    .scaledToFit()
+                    .padding()
+
+                Text(alertSubDesc)
+                    .font(.caption)
+                    .multilineTextAlignment(.center)
+                    .lineLimit(nil)
+                    .fixedSize(horizontal: false, vertical: true)
+                    .foregroundColor(.gray)
                     .padding(.horizontal, 24)
                     .frame(maxWidth: .infinity)
 
@@ -161,14 +182,14 @@ struct GameView: View {
         if showToast {
             VStack {
                 Spacer()
-                Text("✅ 복사되었습니다!")
+                Text("🍚 복사되었습니다!")
                     .padding(.horizontal, 24)
                     .padding(.vertical, 10)
                     .background(Color.black.opacity(0.8))
                     .foregroundColor(.white)
                     .cornerRadius(20)
                     .transition(.opacity)
-                    .padding(.bottom, 80)
+                    .padding(.bottom, 40)
             }
         }
     }
@@ -184,14 +205,14 @@ struct TileView: View {
             .frame(width: 44, height: 44)
             .background(color(for: tile.color))
             .cornerRadius(8)
-            .foregroundColor(.white)
+            .foregroundColor(.black)
     }
 
     func color(for tileColor: TileColor) -> Color {
         switch tileColor {
-        case .gray: return Color(.systemGray4)
-        case .yellow: return .yellow
-        case .green: return .green
+        case .gray: return .blue.opacity(0.05)
+        case .lightBlue: return .cyan.opacity(0.5)
+        case .blue: return .blue.opacity(0.8)
         }
     }
 }

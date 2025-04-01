@@ -9,7 +9,7 @@ import Foundation
 import SwiftUI
 
 enum TileColor {
-    case gray, yellow, green
+    case gray, lightBlue, blue
 }
 
 struct JamoTile: Identifiable, Hashable {
@@ -115,12 +115,12 @@ class GameViewModel: ObservableObject {
         for tile in result {
             let existing = keyboardColors[tile.character]
             switch (existing, tile.color) {
-            case (_, .green):
-                keyboardColors[tile.character] = .green
-            case (.green, _):
+            case (_, .blue):
+                keyboardColors[tile.character] = .blue
+            case (.blue, _):
                 continue
-            case (_, .yellow):
-                keyboardColors[tile.character] = .yellow
+            case (_, .lightBlue):
+                keyboardColors[tile.character] = .lightBlue
             case (nil, .gray):
                 keyboardColors[tile.character] = .gray
             default:
@@ -130,7 +130,7 @@ class GameViewModel: ObservableObject {
 
         currentInput = []
 
-        if result.allSatisfy({ $0.color == .green }) {
+        if result.allSatisfy({ $0.color == .blue }) {
             isGameOver = true
             didWin = true
         } else if attempts.count >= maxAttempts {
@@ -146,7 +146,7 @@ class GameViewModel: ObservableObject {
         for i in 0..<input.count {
             let inputChar = input[i]
             if inputChar == answer[i] {
-                result.append(JamoTile(character: inputChar, color: .green))
+                result.append(JamoTile(character: inputChar, color: .blue))
                 remainingAnswer[i] = "✓" // mark used
             } else {
                 result.append(JamoTile(character: inputChar, color: .gray))
@@ -155,7 +155,7 @@ class GameViewModel: ObservableObject {
 
         for i in 0..<input.count {
             if result[i].color == .gray, let idx = remainingAnswer.firstIndex(of: input[i]) {
-                result[i].color = .yellow
+                result[i].color = .lightBlue
                 remainingAnswer[idx] = "✓"
             }
         }
@@ -206,12 +206,12 @@ extension GameViewModel {
         for attempt in attempts {
             for tile in attempt {
                 switch tile.color {
-                case .green:
-                    result += "🟩"
-                case .yellow:
-                    result += "🟨"
+                case .blue:
+                    result += "💙"
+                case .lightBlue:
+                    result += "🩵"
                 case .gray:
-                    result += "⬜️"
+                    result += "🤍"
                 }
             }
             result += "\n"

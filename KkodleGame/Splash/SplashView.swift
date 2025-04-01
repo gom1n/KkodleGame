@@ -31,18 +31,18 @@ struct SplashView: View {
                                 .font(.system(size: 48, weight: .bold))
                                 .foregroundColor(.primary)
 
-                            Text("Korean Word Puzzle Game")
+                            Text("한글 자모 맞추기 게임")
                                 .font(.system(size: 16, weight: .medium))
                                 .foregroundColor(Color(.systemGray2))
                         }
                         .opacity(opacity)
-                        .offset(y: 160)
+                        .offset(y: 210)
                     }
                     .offset(y: offsetY)
                 }
                 .padding(.top, -220)
                 .frame(maxWidth: .infinity, maxHeight: .infinity)
-                .background(Color(red: 209/255, green: 209/255, blue: 214/255))
+                .background(.blue.opacity(0.05))
                 .onAppear {
                     withAnimation(.easeOut(duration: 1.2)) {
                         self.opacity = 1.0

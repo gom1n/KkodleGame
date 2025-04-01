@@ -72,10 +72,10 @@ struct KeyboardView: View {
 
     func backgroundColor(for jamo: String) -> Color {
         switch viewModel.keyboardColors[jamo] {
-        case .green: return .green
-        case .yellow: return .yellow
-        case .gray: return .gray
-        case nil: return Color(.systemGray5)
+        case .blue: return .blue.opacity(0.8)
+        case .lightBlue: return .cyan.opacity(0.5)
+        case .gray: return .gray.opacity(0.4)
+        case nil: return .blue.opacity(0.05)
         }
     }
 }
