@@ -217,7 +217,13 @@ extension GameViewModel {
             result += "\n"
         }
 
-        result += "\n\(Date())"
+        let formatter = DateFormatter()
+        formatter.locale = Locale(identifier: "ko_KR")
+        formatter.timeZone = TimeZone(identifier: "Asia/Seoul")
+        formatter.dateFormat = "yyyy년 M월 d일 (E) a h시 m분"
+
+        let dateString = formatter.string(from: Date())
+        result += "\n\(dateString)"
         UIPasteboard.general.string = result
     }
 }
