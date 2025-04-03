@@ -19,6 +19,14 @@
 		23A52AEE2D96EF6C00A730A4 /* COMMON_NOUNS.txt in Resources */ = {isa = PBXBuildFile; fileRef = 23A52AEC2D96EF6C00A730A4 /* COMMON_NOUNS.txt */; };
 		23A52AF02D96F36B00A730A4 /* SplashView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23A52AEF2D96F36B00A730A4 /* SplashView.swift */; };
 		23A52AF22D96FEFD00A730A4 /* HowToPlayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23A52AF12D96FEFC00A730A4 /* HowToPlayView.swift */; };
+		629E2FD12D9E4294008D9C46 /* GameFeature.swift in Sources */ = {isa = PBXBuildFile; fileRef = 629E2FD02D9E4293008D9C46 /* GameFeature.swift */; };
+		629E2FD42D9E430C008D9C46 /* ComposableArchitecture in Frameworks */ = {isa = PBXBuildFile; productRef = 629E2FD32D9E430C008D9C46 /* ComposableArchitecture */; };
+		629E2FD72D9E45F2008D9C46 /* ComposableArchitecture in Frameworks */ = {isa = PBXBuildFile; productRef = 629E2FD62D9E45F2008D9C46 /* ComposableArchitecture */; };
+		629E2FDA2D9E4954008D9C46 /* GameView_TCA.swift in Sources */ = {isa = PBXBuildFile; fileRef = 629E2FD92D9E4950008D9C46 /* GameView_TCA.swift */; };
+		629E2FDD2D9E4979008D9C46 /* ResultAlertView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 629E2FDC2D9E4975008D9C46 /* ResultAlertView.swift */; };
+		629E2FDF2D9E4996008D9C46 /* KeyboardView_TCA.swift in Sources */ = {isa = PBXBuildFile; fileRef = 629E2FDE2D9E4990008D9C46 /* KeyboardView_TCA.swift */; };
+		629E2FE12D9E4A22008D9C46 /* ToastView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 629E2FE02D9E4A20008D9C46 /* ToastView.swift */; };
+		62D4CFE02D9E4C37000ACA9D /* GameLogic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62D4CFDF2D9E4C33000ACA9D /* GameLogic.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +44,12 @@
 		23A52AEF2D96F36B00A730A4 /* SplashView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashView.swift; sourceTree = "<group>"; };
 		23A52AF12D96FEFC00A730A4 /* HowToPlayView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HowToPlayView.swift; sourceTree = "<group>"; };
 		23A52AF62D97041400A730A4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		629E2FD02D9E4293008D9C46 /* GameFeature.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameFeature.swift; sourceTree = "<group>"; };
+		629E2FD92D9E4950008D9C46 /* GameView_TCA.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameView_TCA.swift; sourceTree = "<group>"; };
+		629E2FDC2D9E4975008D9C46 /* ResultAlertView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultAlertView.swift; sourceTree = "<group>"; };
+		629E2FDE2D9E4990008D9C46 /* KeyboardView_TCA.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardView_TCA.swift; sourceTree = "<group>"; };
+		629E2FE02D9E4A20008D9C46 /* ToastView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToastView.swift; sourceTree = "<group>"; };
+		62D4CFDF2D9E4C33000ACA9D /* GameLogic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameLogic.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -43,6 +57,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				629E2FD72D9E45F2008D9C46 /* ComposableArchitecture in Frameworks */,
+				629E2FD42D9E430C008D9C46 /* ComposableArchitecture in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -68,6 +84,7 @@
 		23A52AD12D96D05C00A730A4 /* KkodleGame */ = {
 			isa = PBXGroup;
 			children = (
+				629E2FDB2D9E496C008D9C46 /* TCA */,
 				23A52AF62D97041400A730A4 /* Info.plist */,
 				23A52AD42D96D05C00A730A4 /* ContentView.swift */,
 				23A52AF32D97026900A730A4 /* Splash */,
@@ -125,6 +142,43 @@
 			path = Utils;
 			sourceTree = "<group>";
 		};
+		629E2FCD2D9E4273008D9C46 /* Features */ = {
+			isa = PBXGroup;
+			children = (
+				629E2FD02D9E4293008D9C46 /* GameFeature.swift */,
+			);
+			path = Features;
+			sourceTree = "<group>";
+		};
+		629E2FD82D9E4874008D9C46 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				629E2FE02D9E4A20008D9C46 /* ToastView.swift */,
+				629E2FDE2D9E4990008D9C46 /* KeyboardView_TCA.swift */,
+				629E2FDC2D9E4975008D9C46 /* ResultAlertView.swift */,
+				629E2FD92D9E4950008D9C46 /* GameView_TCA.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		629E2FDB2D9E496C008D9C46 /* TCA */ = {
+			isa = PBXGroup;
+			children = (
+				62D4CFDE2D9E4C2B000ACA9D /* Utils_TCA */,
+				629E2FCD2D9E4273008D9C46 /* Features */,
+				629E2FD82D9E4874008D9C46 /* Views */,
+			);
+			path = TCA;
+			sourceTree = "<group>";
+		};
+		62D4CFDE2D9E4C2B000ACA9D /* Utils_TCA */ = {
+			isa = PBXGroup;
+			children = (
+				62D4CFDF2D9E4C33000ACA9D /* GameLogic.swift */,
+			);
+			path = Utils_TCA;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -169,6 +223,9 @@
 				Base,
 			);
 			mainGroup = 23A52AC62D96D05C00A730A4;
+			packageReferences = (
+				629E2FD52D9E45F2008D9C46 /* XCRemoteSwiftPackageReference "swift-composable-architecture" */,
+			);
 			productRefGroup = 23A52AD02D96D05C00A730A4 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -200,9 +257,15 @@
 				23A52AE62D96D1F600A730A4 /* GameViewModel.swift in Sources */,
 				23A52AD52D96D05C00A730A4 /* ContentView.swift in Sources */,
 				23A52AD32D96D05C00A730A4 /* KkodleGameApp.swift in Sources */,
+				629E2FD12D9E4294008D9C46 /* GameFeature.swift in Sources */,
+				629E2FDA2D9E4954008D9C46 /* GameView_TCA.swift in Sources */,
+				629E2FDD2D9E4979008D9C46 /* ResultAlertView.swift in Sources */,
+				62D4CFE02D9E4C37000ACA9D /* GameLogic.swift in Sources */,
 				23A52AEA2D96D22500A730A4 /* KeyboardView.swift in Sources */,
+				629E2FE12D9E4A22008D9C46 /* ToastView.swift in Sources */,
 				23A52AE42D96D1C400A730A4 /* JamoHelper.swift in Sources */,
 				23A52AE82D96D21200A730A4 /* GameView.swift in Sources */,
+				629E2FDF2D9E4996008D9C46 /* KeyboardView_TCA.swift in Sources */,
 				23A52AF02D96F36B00A730A4 /* SplashView.swift in Sources */,
 				23A52AF22D96FEFD00A730A4 /* HowToPlayView.swift in Sources */,
 			);
@@ -361,7 +424,7 @@
 				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
-				SWIFT_VERSION = 5.0;
+				SWIFT_VERSION = 6.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
@@ -397,7 +460,7 @@
 				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
-				SWIFT_VERSION = 5.0;
+				SWIFT_VERSION = 6.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
@@ -424,6 +487,38 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		629E2FD22D9E430C008D9C46 /* XCRemoteSwiftPackageReference "swift-composable-architecture" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/pointfreeco/swift-composable-architecture";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.3.0;
+			};
+		};
+		629E2FD52D9E45F2008D9C46 /* XCRemoteSwiftPackageReference "swift-composable-architecture" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/pointfreeco/swift-composable-architecture";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.3.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		629E2FD32D9E430C008D9C46 /* ComposableArchitecture */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 629E2FD22D9E430C008D9C46 /* XCRemoteSwiftPackageReference "swift-composable-architecture" */;
+			productName = ComposableArchitecture;
+		};
+		629E2FD62D9E45F2008D9C46 /* ComposableArchitecture */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 629E2FD52D9E45F2008D9C46 /* XCRemoteSwiftPackageReference "swift-composable-architecture" */;
+			productName = ComposableArchitecture;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 23A52AC72D96D05C00A730A4 /* Project object */;
 }
